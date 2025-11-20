@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaporBarang - Temukan Barang Hilangmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>IkiLhoRek!</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="laporhilang.html" class="nav-link">Lapor Hilang</a></li>
+                <li><a href="laportemuan.html" class="nav-link">Lapor Temuan</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container search-results">
+        <h1>Hasil Pencarian</h1>
+        <div id="hasilContainer">
+            <!-- Hasil akan ditampilkan di sini oleh JavaScript -->
+        </div>
+        <a href="pencarian.html" class="btn btn-secondary">Kembali ke Pencarian</a>
+    </div>
+
+    <script>
+        // Panggil fungsi untuk menampilkan hasil
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof displayHasilPencarian === 'function') {
+                displayHasilPencarian();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaporBarang - Temukan Barang Hilangmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>IkiLhoRek!</h2>
+            </div>
+           <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="laporhilang.html" class="nav-link">Lapor Hilang</a></li>
+                <li><a href="laportemuan.html" class="nav-link">Lapor Temuan</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>Lapor Barang Hilang</h1>
+        <form id="formHilang">
+            <div class="form-group">
+                <label for="namaBarang">Nama Barang</label>
+                <input type="text" id="namaBarang" name="namaBarang" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kategori">Kategori Barang</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="dompet">Dompet/Kartu Identitas</option>
+                    <option value="kunci">Kunci</option>
+                    <option value="tas">Tas</option>
+                    <option value="ponsel">Ponsel</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="deskripsi">Deskripsi Barang</label>
+                <textarea id="deskripsi" name="deskripsi" rows="4" placeholder="Jelaskan ciri-ciri barang secara detail..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="lokasiHilang">Lokasi Kehilangan</label>
+                <input type="text" id="lokasiHilang" name="lokasiHilang" placeholder="Contoh: Taman Tengah" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalHilang">Tanggal Kehilangan</label>
+                <input type="date" id="tanggalHilang" name="tanggalHilang" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kontak">Kontak yang Dapat Dihubungi</label>
+                <input type="text" id="kontak" name="kontak" placeholder="Nomor HP atau Email" required>
+            </div>
+
+             <!-- TAMBAHAN: Input Kode Hapus -->
+            <div class="form-group">
+                <label for="kodeHapusTemuan">Kode Hapus (4 digit angka)</label>
+                <input type="text" id="kodeHapusTemuan" name="kodeHapusTemuan" 
+                       pattern="\d{4}" maxlength="4" 
+                       placeholder="Contoh: 1234" required
+                       title="Masukkan 4 digit angka untuk kode hapus">
+                <small class="form-help">Kode ini diperlukan untuk menghapus laporan nanti. Simpan baik-baik!</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Laporan</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

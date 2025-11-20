@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaporBarang - Temukan Barang Hilangmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>IkiLhoRek!</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="laporhilang.html" class="nav-link">Lapor Hilang</a></li>
+                <li><a href="laportemuan.html" class="nav-link">Lapor Temuan</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h1>Lapor Barang Temuan</h1>
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">
+            Bantu pemilik barang menemukan barangnya dengan melaporkan barang temuan Anda
+        </p>
+        
+        <form id="formTemuan">
+            <div class="form-group">
+                <label for="namaBarangTemuan">Nama Barang</label>
+                <input type="text" id="namaBarangTemuan" name="namaBarangTemuan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kategoriTemuan">Kategori Barang</label>
+                <select id="kategoriTemuan" name="kategoriTemuan" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="dompet">Dompet/Kartu Identitas</option>
+                    <option value="kunci">Kunci</option>
+                    <option value="tas">Tas</option>
+                    <option value="ponsel">Ponsel</option>
+                    <option value="dokumen">Dokumen</option>
+                    <option value="perhiasan">Perhiasan</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="deskripsiTemuan">Deskripsi Barang</label>
+                <textarea id="deskripsiTemuan" name="deskripsiTemuan" rows="4" placeholder="Jelaskan ciri-ciri barang secara detail, kondisi, dan identifikasi unik..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="lokasiTemuan">Lokasi Penemuan</label>
+                <input type="text" id="lokasiTemuan" name="lokasiTemuan" placeholder="Contoh: Gedung G" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalTemuan">Tanggal Penemuan</label>
+                <input type="date" id="tanggalTemuan" name="tanggalTemuan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lokasiSimpan">Lokasi Penyimpanan Saat Ini</label>
+                <input type="text" id="lokasiSimpan" name="lokasiSimpan" placeholder="Di mana barang disimpan sekarang?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kontakTemuan">Kontak yang Dapat Dihubungi</label>
+                <input type="text" id="kontakTemuan" name="kontakTemuan" placeholder="Nomor HP atau Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="catatanTambahan">Catatan Tambahan</label>
+                <textarea id="catatanTambahan" name="catatanTambahan" rows="3" placeholder="Informasi tambahan seperti cara penyerahan, waktu yang bisa dihubungi, dll..."></textarea>
+            </div>
+
+            <!-- TAMBAHAN: Input Kode Hapus -->
+            <div class="form-group">
+                <label for="kodeHapusTemuan">Kode Hapus (4 digit angka)</label>
+                <input type="text" id="kodeHapusTemuan" name="kodeHapusTemuan" 
+                       pattern="\d{4}" maxlength="4" 
+                       placeholder="Contoh: 1234" required
+                       title="Masukkan 4 digit angka untuk kode hapus">
+                <small class="form-help">Kode ini diperlukan untuk menghapus laporan nanti. Simpan baik-baik!</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Laporan Temuan</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

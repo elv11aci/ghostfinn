@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaporBarang - Temukan Barang Hilangmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>IkiLhoRek!</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="laporhilang.html" class="nav-link">Lapor Hilang</a></li>
+                <li><a href="laportemuan.html" class="nav-link">Lapor Temuan</a></li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Temukan Barang Hilang Anda</h1>
+            <p>Platform untuk melapor dan mencari barang hilang dengan mudah</p>
+            <div class="hero-buttons">
+                <a href="laporhilang.html" class="btn btn-primary">Lapor Barang Hilang</a>
+                <a href="laportemuan.html" class="btn btn-secondary">Lapor Barang Temuan</a>
+            </div>
+        </div>
+    </section>
+
+  <!-- Quick Search Section -->
+<section class="quick-search">
+    <div class="container">
+        <div class="search-box-large">
+            <h2>Cari Barang Hilang atau Temuan</h2>
+            <p>Temukan barang berdasarkan nama, deskripsi, atau lokasi</p>
+            <div class="search-form">
+                <input type="text" id="homeSearch" placeholder="Contoh: Dompet kulit, kunci mobil, tas laptop...">
+                
+            </div>
+            <div class="search-tips">
+                <span>Tips: Gunakan kata kunci spesifik untuk hasil lebih akurat</span>
+            </div>
+            
+            <!-- Container untuk hasil pencarian -->
+            <div id="searchResults" class="search-results" style="display: none;">
+                <div class="results-header">
+                    <h3>Hasil Pencarian</h3>
+                    <span id="resultsCount" class="results-count">0 hasil</span>
+                </div>
+                <div id="resultsList" class="results-list">
+                    <!-- Hasil pencarian akan muncul di sini -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div id="statsContainer">
+                <!-- Stats akan diisi oleh JavaScript -->
+            </div>
+        </div>
+    </section>
+<!-- All Items Section -->
+<section class="all-items">
+    <div class="container">
+        <div class="section-header">
+            <h2>Semua Laporan Terbaru</h2>
+            <p>Barang hilang dan temuan yang dilaporkan oleh pengguna</p>
+        </div>
+        
+        <div class="filter-options">
+            <button class="filter-btn active" onclick="filterItems('all')">Semua</button>
+            <button class="filter-btn" onclick="filterItems('hilang')">Barang Hilang</button>
+            <button class="filter-btn" onclick="filterItems('temuan')">Barang Temuan</button>
+        </div>
+
+        <!-- INI ELEMENT YANG PENTING -->
+        <div id="allItemsContainer" class="items-grid">
+            <!-- Semua barang akan ditampilkan di sini oleh JavaScript -->
+        </div>
+
+        <div class="load-more-container">
+            <button id="loadMoreBtn" class="btn btn-secondary" onclick="loadMoreItems()">Muat Lebih Banyak</button>
+        </div>
+    </div>
+</section>
+                <!-- Semua barang akan ditampilkan di sini -->
+            </div>
+
+            <div class="load-more-container">
+                <button id="loadMoreBtn" class="btn btn-secondary" onclick="loadMoreItems()">Muat Lebih Banyak</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Menggunakan LaporBarang</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>📝 Lapor Hilang</h3>
+                    <p>Laporkan barang yang hilang dengan detail dan foto untuk membantu pencarian</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Lapor Temuan</h3>
+                    <p>Laporkan barang temuan untuk membantu pemilik aslinya menemukan barangnya</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📍 Cari Berdasarkan Lokasi</h3>
+                    <p>Temukan barang berdasarkan lokasi kehilangan atau penemuan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
